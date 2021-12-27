@@ -13,3 +13,15 @@ $green: #1ec2a4;
 
 $ff-antonio: "Antonio", sans-serif;
 $ff-spartan: "Spartan", sans-serif;
+
+@mixin tablet {
+  @media (max-width: 1300px) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media (max-width: 768px) {
+    @content;
+  }
+}

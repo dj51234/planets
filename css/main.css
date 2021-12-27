@@ -18,6 +18,9 @@ h2 {
   line-height: 52px;
   letter-spacing: -1.5px;
   text-transform: uppercase; }
+  @media (max-width: 1300px) {
+    h2 {
+      font-size: 24px; } }
 
 h3 {
   font-size: 12px;
@@ -30,6 +33,9 @@ h4 {
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #838391; }
+  @media (max-width: 1300px) {
+    h4 {
+      font-size: 8px; } }
 
 a {
   text-decoration: none;
@@ -85,11 +91,29 @@ header {
     display: flex;
     width: 100%;
     justify-content: space-between; }
+    header nav .hamburger {
+      display: none; }
+      @media (max-width: 768px) {
+        header nav .hamburger {
+          display: inline; } }
+    @media (max-width: 1300px) {
+      header nav {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 30px; } }
+    @media (max-width: 768px) {
+      header nav {
+        flex-direction: row;
+        justify-content: space-between; } }
     header nav ul {
       list-style: none;
       display: flex;
       align-items: center;
       gap: 1.5rem; }
+      @media (max-width: 768px) {
+        header nav ul {
+          display: none; } }
       header nav ul a {
         text-transform: uppercase; }
 
@@ -101,10 +125,16 @@ main {
     width: 100%;
     display: flex;
     flex-direction: column; }
+    @media (max-width: 1300px) {
+      main .body-container {
+        max-width: 768px; } }
   main .container {
     display: flex;
     padding-top: 150px;
     width: 100%; }
+    @media (max-width: 1300px) {
+      main .container {
+        flex-direction: column; } }
     main .container .planet-image {
       display: flex;
       align-items: center;
@@ -115,6 +145,16 @@ main {
     main .container .planet-info {
       display: flex;
       justify-content: flex-end; }
+      @media (max-width: 1300px) {
+        main .container .planet-info {
+          justify-content: center;
+          margin-top: 130px; } }
+      @media (max-width: 1300px) {
+        main .container .planet-info .flex-body {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%; } }
       main .container .planet-info h1 {
         font-size: 80px;
         font-weight: 700;
@@ -125,6 +165,9 @@ main {
         width: 100%;
         margin: 20px 0;
         color: #fff; }
+      @media (max-width: 1300px) {
+        main .container .planet-info .text.source {
+          margin-bottom: 0; } }
       main .container .planet-info .buttons {
         display: flex;
         flex-direction: column;
@@ -140,6 +183,9 @@ main {
     gap: 50px;
     padding: 30px 0 50px;
     width: 100%; }
+    @media (max-width: 1300px) {
+      main .info {
+        margin-top: 10px; } }
     main .info .info-item {
       flex: 1 1;
       max-width: 235px;

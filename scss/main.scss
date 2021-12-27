@@ -25,11 +25,35 @@ header {
     width: 100%;
     justify-content: space-between;
 
+    .hamburger {
+      display: none;
+
+      @include phone {
+        display: inline;
+      }
+    }
+
+    @include tablet {
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      gap: 30px;
+    }
+
+    @include phone {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
     ul {
       list-style: none;
       display: flex;
       align-items: center;
       gap: 1.5rem;
+
+      @include phone {
+        display: none;
+      }
 
       a {
         text-transform: uppercase;
@@ -47,12 +71,20 @@ main {
     width: 100%;
     display: flex;
     flex-direction: column;
+
+    @include tablet {
+      max-width: 768px;
+    }
   }
 
   .container {
     display: flex;
     padding-top: 150px;
     width: 100%;
+
+    @include tablet {
+      flex-direction: column;
+    }
 
     .planet-image {
       display: flex;
@@ -69,6 +101,20 @@ main {
       display: flex;
       justify-content: flex-end;
 
+      @include tablet {
+        justify-content: center;
+        margin-top: 130px;
+      }
+
+      .flex-body {
+        @include tablet {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+        }
+      }
+
       h1 {
         font-size: 80px;
         font-weight: 700;
@@ -82,6 +128,13 @@ main {
         margin: 20px 0;
         color: $white;
       }
+
+      .text.source {
+        @include tablet {
+          margin-bottom: 0;
+        }
+      }
+
       .buttons {
         display: flex;
         flex-direction: column;
@@ -101,6 +154,10 @@ main {
     gap: 50px;
     padding: 30px 0 50px;
     width: 100%;
+
+    @include tablet {
+      margin-top: 10px;
+    }
 
     .info-item {
       flex: 1 1;
