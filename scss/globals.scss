@@ -1,0 +1,58 @@
+html {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 80px;
+  line-height: 103px;
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 52px;
+  letter-spacing: -1.5px;
+}
+
+h3 {
+  font-size: 12px;
+  line-height: 25px;
+  letter-spacing: 2.5px;
+}
+
+h4 {
+  font-size: 11px;
+  line-height: 25px;
+  letter-spacing: 1px;
+}
+
+.text {
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.btn {
+  padding: 10px 200px 10px 20px;
+  font-size: 12px;
+  line-height: 25px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  display: flex;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+
+  &-primary {
+    background: $dark-blue;
+    border: 1px solid $grey;
+    color: $white;
+    &:hover {
+      background: $dark-grey;
+      border: 1px solid transparent;
+    }
+  }
+
+  span {
+    color: grey;
+    margin-right: 15px;
+  }
+}

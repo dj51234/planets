@@ -1,0 +1,14 @@
+{
+  "name": "planets-app",
+  "version": "1.0.0",
+  "description": "Facts about planets in the solar system",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o assets/css/ --recursive"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^7.0.0"
+  }
+}
