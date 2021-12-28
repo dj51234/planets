@@ -1,0 +1,39 @@
+nav.mobile-nav {
+  display: none;
+
+  @include phone {
+    border-top: 1px solid $dark-grey;
+    border-bottom: 1px solid $dark-grey;
+    height: 64px;
+    display: flex;
+    padding: 0 30px;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      li {
+        display: flex;
+        align-items: center;
+
+        h3 {
+          font-size: 11px;
+
+          @include x-small {
+            font-size: 8px;
+          }
+        }
+
+        a {
+          text-transform: uppercase;
+
+          height: 100%;
+          &:hover {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}

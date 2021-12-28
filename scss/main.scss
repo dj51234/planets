@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Antonio:wght@300&family=Spartan:wght@400;700&display=swap");
 @import "vars.scss";
 @import "globals.scss";
+@import "mobile-nav.scss";
 
 body {
   background-color: $dark-blue;
@@ -57,6 +58,10 @@ header {
 
       a {
         text-transform: uppercase;
+
+        @include tablet {
+          font-size: 11px;
+        }
       }
     }
   }
@@ -86,10 +91,20 @@ main {
       flex-direction: column;
     }
 
+    @include phone {
+      padding-top: 75px;
+    }
+
     .planet-image {
       display: flex;
       align-items: center;
       justify-content: center;
+
+      @include x-small {
+        & img {
+          width: 111px;
+        }
+      }
     }
 
     .planet-image,
@@ -106,12 +121,26 @@ main {
         margin-top: 130px;
       }
 
+      @include x-small {
+        margin-top: 25px;
+      }
+
       .flex-body {
         @include tablet {
           display: flex;
           align-items: center;
           justify-content: space-between;
           width: 100%;
+        }
+
+        @include phone {
+          justify-content: center;
+          text-align: center;
+          padding: 20px;
+        }
+
+        @include x-small {
+          text-align: center;
         }
       }
 
@@ -120,6 +149,11 @@ main {
         font-weight: 700;
         font-family: $ff-antonio;
         margin: 0 0 25px;
+
+        @include x-small {
+          font-size: 40px;
+          line-height: 40px;
+        }
       }
 
       .text {
@@ -127,6 +161,14 @@ main {
         width: 100%;
         margin: 20px 0;
         color: $white;
+
+        @include phone {
+          max-width: 100%;
+        }
+
+        @include x-small {
+          font-size: 11px;
+        }
       }
 
       .text.source {
@@ -142,6 +184,10 @@ main {
         max-width: 350px;
         width: 100%;
         margin: 25px 0;
+
+        @include phone {
+          display: none;
+        }
       }
     }
   }
@@ -159,12 +205,37 @@ main {
       margin-top: 10px;
     }
 
+    @include phone {
+      flex-direction: column;
+      gap: 20px;
+    }
+
     .info-item {
       flex: 1 1;
       max-width: 235px;
       padding: 20px;
       width: 100%;
       border: 1px solid $grey;
+
+      @include phone {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 100%;
+        width: 90%;
+        padding: 10px;
+
+        h2 {
+          font-size: 20px;
+          font-weight: 400;
+        }
+
+        @include x-small {
+          .text {
+            font-size: 8px;
+          }
+        }
+      }
     }
   }
 }

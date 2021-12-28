@@ -73,6 +73,34 @@ a {
     color: grey;
     margin-right: 15px; }
 
+nav.mobile-nav {
+  display: none; }
+  @media (max-width: 768px) {
+    nav.mobile-nav {
+      border-top: 1px solid #38384f;
+      border-bottom: 1px solid #38384f;
+      height: 64px;
+      display: flex;
+      padding: 0 30px; }
+      nav.mobile-nav ul {
+        display: flex;
+        justify-content: space-between;
+        width: 100%; }
+        nav.mobile-nav ul li {
+          display: flex;
+          align-items: center; }
+          nav.mobile-nav ul li h3 {
+            font-size: 11px; } }
+        @media (max-width: 768px) and (max-width: 400px) {
+          nav.mobile-nav ul li h3 {
+            font-size: 8px; } }
+  @media (max-width: 768px) {
+          nav.mobile-nav ul li a {
+            text-transform: uppercase;
+            height: 100%; }
+            nav.mobile-nav ul li a:hover {
+              color: #fff; } }
+
 body {
   background-color: #070724;
   background-image: url("../assets/images/background-stars.svg");
@@ -116,6 +144,9 @@ header {
           display: none; } }
       header nav ul a {
         text-transform: uppercase; }
+        @media (max-width: 1300px) {
+          header nav ul a {
+            font-size: 11px; } }
 
 main {
   width: 100%; }
@@ -135,10 +166,16 @@ main {
     @media (max-width: 1300px) {
       main .container {
         flex-direction: column; } }
+    @media (max-width: 768px) {
+      main .container {
+        padding-top: 75px; } }
     main .container .planet-image {
       display: flex;
       align-items: center;
       justify-content: center; }
+      @media (max-width: 400px) {
+        main .container .planet-image img {
+          width: 111px; } }
     main .container .planet-image,
     main .container .planet-info {
       flex: 1; }
@@ -149,22 +186,43 @@ main {
         main .container .planet-info {
           justify-content: center;
           margin-top: 130px; } }
+      @media (max-width: 400px) {
+        main .container .planet-info {
+          margin-top: 25px; } }
       @media (max-width: 1300px) {
         main .container .planet-info .flex-body {
           display: flex;
           align-items: center;
           justify-content: space-between;
           width: 100%; } }
+      @media (max-width: 768px) {
+        main .container .planet-info .flex-body {
+          justify-content: center;
+          text-align: center;
+          padding: 20px; } }
+      @media (max-width: 400px) {
+        main .container .planet-info .flex-body {
+          text-align: center; } }
       main .container .planet-info h1 {
         font-size: 80px;
         font-weight: 700;
         font-family: "Antonio", sans-serif;
         margin: 0 0 25px; }
+        @media (max-width: 400px) {
+          main .container .planet-info h1 {
+            font-size: 40px;
+            line-height: 40px; } }
       main .container .planet-info .text {
         max-width: 350px;
         width: 100%;
         margin: 20px 0;
         color: #fff; }
+        @media (max-width: 768px) {
+          main .container .planet-info .text {
+            max-width: 100%; } }
+        @media (max-width: 400px) {
+          main .container .planet-info .text {
+            font-size: 11px; } }
       @media (max-width: 1300px) {
         main .container .planet-info .text.source {
           margin-bottom: 0; } }
@@ -175,6 +233,9 @@ main {
         max-width: 350px;
         width: 100%;
         margin: 25px 0; }
+        @media (max-width: 768px) {
+          main .container .planet-info .buttons {
+            display: none; } }
   main .info {
     margin: 85px auto 0;
     display: flex;
@@ -186,9 +247,27 @@ main {
     @media (max-width: 1300px) {
       main .info {
         margin-top: 10px; } }
+    @media (max-width: 768px) {
+      main .info {
+        flex-direction: column;
+        gap: 20px; } }
     main .info .info-item {
       flex: 1 1;
       max-width: 235px;
       padding: 20px;
       width: 100%;
       border: 1px solid #838391; }
+      @media (max-width: 768px) {
+        main .info .info-item {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          max-width: 100%;
+          width: 90%;
+          padding: 10px; }
+          main .info .info-item h2 {
+            font-size: 20px;
+            font-weight: 400; } }
+  @media (max-width: 768px) and (max-width: 400px) {
+    main .info .info-item .text {
+      font-size: 8px; } }

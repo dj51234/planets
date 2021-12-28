@@ -25,3 +25,9 @@ $ff-spartan: "Spartan", sans-serif;
     @content;
   }
 }
+
+@mixin x-small {
+  @media (max-width: 400px) {
+    @content;
+  }
+}
