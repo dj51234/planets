@@ -121,6 +121,10 @@ main {
         margin-top: 130px;
       }
 
+      @include phone {
+        margin-top: 50px;
+      }
+
       @include x-small {
         margin-top: 25px;
       }
@@ -223,6 +227,7 @@ main {
         justify-content: space-between;
         max-width: 100%;
         width: 90%;
+        padding: 0 20px;
 
         h2 {
           font-size: 20px;

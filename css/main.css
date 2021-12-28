@@ -186,6 +186,9 @@ main {
         main .container .planet-info {
           justify-content: center;
           margin-top: 130px; } }
+      @media (max-width: 768px) {
+        main .container .planet-info {
+          margin-top: 50px; } }
       @media (max-width: 400px) {
         main .container .planet-info {
           margin-top: 25px; } }
@@ -263,7 +266,8 @@ main {
           align-items: center;
           justify-content: space-between;
           max-width: 100%;
-          width: 90%; }
+          width: 90%;
+          padding: 0 20px; }
           main .info .info-item h2 {
             font-size: 20px;
             font-weight: 400; } }
